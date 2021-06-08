@@ -1,0 +1,36 @@
+body
+    font-family: sans-serif
+    background-color: #F1EBE4
+.container
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+.button
+    position: relative
+    display: inline-block
+    text-decoration: none
+    background-color: #9A34E9
+    color: #FFFFFF
+    font-weight: 700
+    padding: 10px 20px
+    border-radius: 5px
+    overflow: hidden
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 1.5em
+        height: 100%
+        background-color: rgba(#fff, 0.6)
+        transform: translateX(-4em) skewX(-45deg)
+    &:hover
+        &:before
+            animation: move-light 0.5s
+
+@keyframes move-light
+    from
+        transform: translateX(-4em) skewX(-45deg)
+    to
+        transform: translateX(10em) skewX(-45deg)
